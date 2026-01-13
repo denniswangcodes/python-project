@@ -1,18 +1,59 @@
-print("hello world")
+# from math import *
 
-print("    /|")
-print("   / |")
-print("  /  |")
-print(" /   |")
-print("/____|")
+# print("hello world")
 
-character_name = "John" # string
-character_age = 35      # number
-is_male = True          # boolean
-print (f"There was once a man named {character_name}")
-print (f"he is {character_age} years old")
+# print("    /|")
+# print("   / |")
+# print("  /  |")
+# print(" /   |")
+# print("/____|")
 
-print("She exclaimed \"Wow!\"")
-phrase = "Goodbye World"
-print(phrase.upper().isupper())
-print(len(phrase))
+# character_name = "John" # string
+# character_age = 35      # number
+# is_male = True          # boolean
+# print (f"There was once a man named {character_name}")
+# print (f"he is {character_age} years old")
+
+# print("She exclaimed \"Wow!\"")
+# phrase = "Goodbye World"
+# print(phrase.upper().isupper())
+# print(len(phrase))
+# print(phrase.index("G"))
+# print(phrase.replace("World", "Heaven"))
+# print(10 % 3)
+# print(str(5))
+# print(pow(2, 3))
+# print(abs(-5))
+# print(round(3.7))
+# print(max(4, 100))
+# print(floor(3.7))
+# print(ceil(3.8))
+# print(sqrt(36))
+# name = input("Enter your name: ")
+# print(f"Hello {name}")
+# num1 = input("Enter first number: ")
+# num2 = input("Enter second number: ")
+# result = float(num1) + float(num2)
+# print(result)
+
+# lucky_numbers = [4, 8, 15, 100, 23, 42]
+# friends = ["Kevin", "Karen", "Jim", "Jim", "Oscar", "Toby"]
+# # print(friends[1:4])
+
+# friends.extend(lucky_numbers)
+# friends.append("Creed")
+# friends.insert(1, "Kelly")
+# friends.remove("Oscar")
+# friends.pop()
+# # friends.clear()
+# print(friends)
+# print(friends.index("Karen"))
+# print(friends.count("Jim"))
+# lucky_numbers.sort()
+# lucky_numbers.reverse()
+# lucky_numbers.copy()
+# print(lucky_numbers)
+
+#tuple, immutable
+coordinates = (4, 5)
+print(coordinates)
