@@ -54,6 +54,38 @@
 # lucky_numbers.copy()
 # print(lucky_numbers)
 
-#tuple, immutable
-coordinates = (4, 5)
-print(coordinates)
+# tuple, immutable
+# coordinates = (4, 5)
+# print(coordinates)
+
+# functions
+# def greet(name: str, age: int):
+#     print(f"Hi {name} you are {age} years old")
+# greet("Mike", 30)
+# def cube(num):
+#     return num*num*num
+# print(cube(2))
+
+# conditionals
+# is_male = False
+# is_tall = False
+# if is_male and is_tall:
+#     print("You are either male or tall or both")
+# elif is_male and not(is_tall):
+#     print("You are male but not tall")
+# elif not(is_male) and is_tall:
+#     print("You are not a male but tall")
+# else:
+#     print("You are nothing")
+
+# def max_num(num1, num2, num3):
+#     if num1 > num2 and num1 > num3:
+#         return num1
+#     elif num2 > num1 and num2 > num3:
+#         return num2
+#     else:
+#         return num3
+    
+# print(f"Biggest number is {max_num(2, 5, 9)}")
+
+# dictionary
