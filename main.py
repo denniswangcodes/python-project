@@ -89,12 +89,26 @@
 # print(f"Biggest number is {max_num(2, 5, 9)}")
 
 # dictionary
-monthConversions = {
-    "Jan": "January",
-    "Feb": "Feburary",
-    "Mar": "March",
-    "Apr": "April",
-    "May": "May"
-}
+# monthConversions = {
+#     "Jan": "January",
+#     "Feb": "Feburary",
+#     "Mar": "March",
+#     "Apr": "April",
+#     "May": "May"
+# }
 
-print(monthConversions["Jan"])
+# print(monthConversions["Jan"])
+# print(monthConversions.get("Feb"))
+
+# looping
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+secret_word = "giraffe"
+guess = ""
+
+while guess != secret_word:
+    guess = input("Enter guess: ")
+print("You guessed it!")
