@@ -149,8 +149,20 @@
 
 # try excep error handling
 
-try:
-    number = int(input("Enter a number: "))
-    print(number)
-except ValueError:
-    print("Invalid input!")
+# try:
+#     number = int(input("Enter a number: "))
+#     print(number)
+# except ValueError as err:
+#     print(err)
+
+# read from external file
+# employee_file = open("sample.txt", "r") #or w or a for append
+
+# for employee in employee_file.readlines():
+#     print(employee)
+# employee_file.close()
+
+# write to external file
+employee_file = open("sample.txt", "a") #or w or a for append
+employee_file.write("\nToby")
+employee_file.close()
