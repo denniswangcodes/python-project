@@ -89,3 +89,12 @@
 # print(f"Biggest number is {max_num(2, 5, 9)}")
 
 # dictionary
+monthConversions = {
+    "Jan": "January",
+    "Feb": "Feburary",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May"
+}
+
+print(monthConversions["Jan"])

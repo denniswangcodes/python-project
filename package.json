@@ -1,0 +1,7 @@
+{
+  "name": "python-project",
+  "version": "1.0.0",
+  "scripts": {
+    "push": "git add . && git commit -m \"update\" && git push"
+  }
+}
