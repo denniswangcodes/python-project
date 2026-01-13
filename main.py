@@ -101,14 +101,56 @@
 # print(monthConversions.get("Feb"))
 
 # looping
-i = 1
-while i <= 10:
-    print(i)
-    i += 1
+# i = 1
+# while i <= 10:
+#     print(i)
+#     i += 1
 
-secret_word = "giraffe"
-guess = ""
+# secret_word = "giraffe"
+# guess = ""
+# guess_count = 0
+# guess_limit = 3
+# out_of_guesses = False
 
-while guess != secret_word:
-    guess = input("Enter guess: ")
-print("You guessed it!")
+# while guess != secret_word and not(out_of_guesses):
+#     if guess_count < guess_limit:
+#         guess = input("Enter guess: ")
+#         guess_count += 1
+#         print(f"You have {guess_limit - guess_count} gusses left!")
+#     else: 
+#         out_of_guesses = True
+
+# if out_of_guesses:
+#     print("You are out of gusses, sucker!")
+# else:
+#     print("You win!")
+
+# for i in range(1, 6, 2):
+#     print(i)
+# for letter in ():
+#     print(letter)
+
+# ***for loop with length index steeps
+
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9],
+#     [0]
+# ]
+# print(matrix[0][0])
+
+# def raise_to_power(base, pow):
+#     result = 1
+#     for index in range(pow):
+#         result = result * base
+#     return result
+# print(raise_to_power(3, 2))
+
+# try excep error handling
+
+try:
+    number = int(input("Enter a number: "))
+    print(number)
+except ValueError:
+    print("Invalid input!")
