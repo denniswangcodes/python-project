@@ -163,6 +163,41 @@
 # employee_file.close()
 
 # write to external file
-employee_file = open("sample.txt", "a") #or w or a for append
-employee_file.write("\nToby")
-employee_file.close()
+# employee_file = open("sample.txt", "a") #or w or a for append
+# employee_file.write("\nToby")
+# employee_file.close()
+
+# Classes and Objects
+# from Question import Question
+
+# question_prompts = [
+#     "What color are apples?\n(a) r\n(b) b\n(c) g",
+#     "What color are blueberries?\n(a) r\n(b) b\n(c) g",
+#     "What color are limes?\n(a) r\n(b) b\n(c) g",
+# ]
+
+# questions = [
+#     Question(question_prompts[0], "a"),
+#     Question(question_prompts[1], "b"),
+#     Question(question_prompts[2], "c")
+# ]
+
+# def run_test(questions):
+#     score = 0
+#     for question in questions:
+#         answer = input(question.prompt)
+#         if answer == question.answer:
+#             score += 1
+#     print(f"You got {score} out of {len(questions)} correct!")
+
+# run_test(questions)
+
+# Inheritance
+from Chef import Chef
+from ChineseChef import ChineseChef
+
+myChef = Chef()
+myChef.make_special_dish()
+
+myChineseChef = ChineseChef()
+myChineseChef.make_special_dish()
