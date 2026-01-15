@@ -192,12 +192,69 @@
 
 # run_test(questions)
 
-# Inheritance
-from Chef import Chef
-from ChineseChef import ChineseChef
+# # Inheritance
+# from Chef import Chef
+# from ChineseChef import ChineseChef
 
-myChef = Chef()
-myChef.make_special_dish()
+# myChef = Chef()
+# myChef.make_special_dish()
 
-myChineseChef = ChineseChef()
-myChineseChef.make_special_dish()
+# myChineseChef = ChineseChef()
+# myChineseChef.make_special_dish()
+
+Convert the following bullet points to one professional paragraph (appropriate length) therapy treatment progress note, paraphrasing not just the content, but high lighting client response to intervention, client's sharing, clinical significance of challenges, sharing, and successful progress. DON'T SKIP ANY INFORMATION. Separately come up with one sentence of what intervention is appropriately c used in session for what 'shared as well as client's response to it (like engaging cooperative) and one sentence homework assignment from the contents and make it clear it's separate from the paragraph for me to use.
+
+df = pad.DataFrame([[2,3,4], [4,5,6], [7,8,9]], columns=["A","B","C"], index=["x","y","z")
+df.head
+df.columns
+df.index
+df.describe()
+df.info
+df.nunique()
+df['A'].unique()
+df.shape
+
+coffee = pd.read_csv(path)
+coffee = pd.read_parquet(path)
+coffee = pd.read_excel(path)
+coffe.sample(10, random_state=1)
+coffee.head()
+coffee.tail()
+coffee.loc[#row, #column]
+coffee.loc[5:8, ["Day, "Units Sold"]]
+coffee.iloc[:, [0,2]] #only using rows oclumns index value
+coffe.sort_values(["Units Sold", "Coffee Type", ascending=[false] or ascending=[0,1])
+for index, row in coffee.iterrows():
+	print(index)
+coffee = coffee.copy()
+
+import numpy as np
+coffee['price'] = 4.99
+coffee['new_price'] = np.where(coffee['Coffee Type']=='Espresso, 3.99, 5.99)
+coffee.drop(columns=['price'], inpalce=True)
+coffee = coffee.drop(columns=['price'])
+coffee = coffee[['Day, 'Coffee', 'Units Sold']] # implicit way to drop columns
+coffee.rename(columns={'price':'new price'})
+
+bios.loc[(bios['height_cm'] > 215) & (bios['born_country]=="USA")]
+bios[bios['name'].str.contains("Keith|Patrick", case=False)]
+bios_new = bios.copy()
+bios_new['first_name'] = bios_new['name'].str.split(' ').str[0]
+bios_new.query('first_name == "Kieth"')
+bios_new['born_date'] = pd.to_datetime(bios_new['born_daate'], format="Y%-%m-%d")
+bios_new['born_year'] = bios_new['born_datetime'].dt.year
+bios_new.to_csv(path, index=false)
+bios['height_cateogry'] = bios['height_cm'].apply(lambda x: 'Short' if x < 165 else ('Average' if x < 185 else 'Tall'))
+def categorize_athlete(row):
+  if rowp'height_cm'] < 175 and row['weight_kg'] < 70:
+    return 'Lightweight'
+  else:
+    return 'Heavyweight'
+bios['Category'] = bios.apply(categorize_athlete, axis=1) #axis=1 row by row, 0 col by col
+
+nocs = pd.read_csv(path)
+pd.merge(bios, nocs, left_on='born_country', right_on='NOC', how=inner)
+
+
+
+
