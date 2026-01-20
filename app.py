@@ -1,11 +1,17 @@
 import pandas as pd
 from fastapi import FastAPI, Query
+from pydantic import BaseModel
+from datetime import datetime
 from db import get_conn, seed_from_csv
 
 app = FastAPI(title="Python API + SQL + Pandas MVP")
 
 conn = get_conn()
 seed_info = seed_from_csv(conn)
+
+@app.get("/")
+def index():
+     return "Welcome to Jackass"
 
 @app.get("/health")
 def health():
@@ -122,4 +128,48 @@ def top_cities(limit: int = Query(5, ge=1, le=50)):
     return {
         "limit": limit,
         "data": out.to_dict(orient="records")
+    }
+
+class TransactionCreate(BaseModel):
+    user_id: str
+    property_id: str
+    city: str
+    state: str
+    amount: float
+    txn_ts: str | None = None
+
+@app.post("/transactions")
+def create_transaction(transaction: TransactionCreate):
+    """
+    Create a new transaction record.
+    
+    Demonstrates:
+    - POST endpoint with request body
+    - Pydantic model validation
+    - SQL INSERT with parameter binding
+    - Returning the created record
+    """
+    # Use current timestamp if not provided
+    txn_ts = transaction.txn_ts or datetime.now().isoformat()
+    
+    # Insert the transaction
+    cursor = conn.execute(
+        """
+        INSERT INTO transactions (user_id, property_id, city, state, amount, txn_ts)
+        VALUES (?, ?, ?, ?, ?, ?)
+        """,
+        (transaction.user_id, transaction.property_id, transaction.city, 
+         transaction.state, transaction.amount, txn_ts)
+    )
+    conn.commit()
+    
+    # Return the created record with its ID
+    return {
+        "txn_id": cursor.lastrowid,
+        "user_id": transaction.user_id,
+        "property_id": transaction.property_id,
+        "city": transaction.city,
+        "state": transaction.state,
+        "amount": transaction.amount,
+        "txn_ts": txn_ts
     }

@@ -202,3 +202,38 @@
 # myChineseChef = ChineseChef()
 # myChineseChef.make_special_dish()
 
+# Recursion
+# access emails within emails
+
+email_data = {
+    "subject": "Hello",
+    "from": "alice@example.com",
+    "reply": {
+        "subject": "Re: Hello",
+        "from": "bob@example.com",
+        "reply": {
+            "subject": "Re: Re: Hello",
+            "from": "carol@example.com"
+        }
+    }
+}
+
+def collect_emails(email):
+    # start with current email
+    emails = [email]
+    count = 1
+
+    # if there is a nested email, recurse
+    if "reply" in email:
+        child_count, child_emails = collect_emails(email["reply"])
+        count += child_count
+        emails += child_emails
+
+    return count, emails
+
+count, all_emails = collect_emails(email_data)
+
+print("total email count:", count)
+
+for e in all_emails:
+    print(e["subject"])
